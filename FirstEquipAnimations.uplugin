@@ -1,0 +1,34 @@
+{
+	"FileVersion": 3,
+	"SemVersion": "1.0.0",
+	"AcceptsAnyRemoteVersion": true,
+	"Version": 1,
+	"VersionName": "1.0.0",
+	"FriendlyName": "FirstEquipAnimations",
+	"Description": "Replaces the boring equip animations with the animations that you get when you equip the tools for the first time!",
+	"Category": "Modding",
+	"CreatedBy": "Scordium (Topaz#6700)",
+	"CreatedByURL": "",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"SupportURL": "https://discord.gg/HERWEeZ4cu",
+	"CanContainContent": true,
+	"IsBetaVersion": false,
+	"IsExperimentalVersion": false,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "FirstEquipAnimations",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "SML",
+			"SemVersion": "^3.4.1",
+			"bIsOptional": false,
+			"Enabled": true
+		}
+	]
+}
