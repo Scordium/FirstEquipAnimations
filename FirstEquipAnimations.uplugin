@@ -1,9 +1,9 @@
 {
 	"FileVersion": 3,
-	"SemVersion": "1.0.0",
+	"SemVersion": "1.0.1",
 	"AcceptsAnyRemoteVersion": true,
 	"Version": 1,
-	"VersionName": "1.0.0",
+	"VersionName": "1.0.1",
 	"FriendlyName": "FirstEquipAnimations",
 	"Description": "Replaces the boring equip animations with the animations that you get when you equip the tools for the first time!",
 	"Category": "Modding",
