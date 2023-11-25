@@ -1,9 +1,9 @@
 {
 	"FileVersion": 3,
-	"SemVersion": "1.0.1",
+	"SemVersion": "1.0.3",
 	"AcceptsAnyRemoteVersion": true,
 	"Version": 1,
-	"VersionName": "1.0.1",
+	"VersionName": "1.0.3",
 	"FriendlyName": "FirstEquipAnimations",
 	"Description": "Replaces the boring equip animations with the animations that you get when you equip the tools for the first time!",
 	"Category": "Modding",
@@ -26,7 +26,7 @@
 	"Plugins": [
 		{
 			"Name": "SML",
-			"SemVersion": "^3.4.1",
+			"SemVersion": "^3.6.0",
 			"bIsOptional": false,
 			"Enabled": true
 		}

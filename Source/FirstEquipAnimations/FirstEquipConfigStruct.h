@@ -10,38 +10,40 @@ struct FFirstEquipConfigStruct {
     GENERATED_BODY()
 public:
     UPROPERTY(BlueprintReadWrite)
-    float Boombox_Chance;
+    float Boombox_Chance{};
 
     UPROPERTY(BlueprintReadWrite)
-    float Chainsaw_Chance;
+    float Chainsaw_Chance{};
 
     UPROPERTY(BlueprintReadWrite)
-    float NobeliskDetonator_Chance;
+    float NobeliskDetonator_Chance{};
 
     UPROPERTY(BlueprintReadWrite)
-    float PortableMiner_Chance;
+    float PortableMiner_Chance{};
 
     UPROPERTY(BlueprintReadWrite)
-    float RebarGun_Chance;
+    float RebarGun_Chance{};
 
     UPROPERTY(BlueprintReadWrite)
-    float Rifle_Chance;
+    float Rifle_Chance{};
 
     UPROPERTY(BlueprintReadWrite)
-    float XenoZapper_Chance;
+    float XenoZapper_Chance{};
 
     UPROPERTY(BlueprintReadWrite)
-    float XenoBasher_Chance;
+    float XenoBasher_Chance{};
 
     UPROPERTY(BlueprintReadWrite)
-    float Unclassified_Chance;
+    float Unclassified_Chance{};
 
     /* Retrieves active configuration value and returns object of this struct containing it */
-    static FFirstEquipConfigStruct GetActiveConfig() {
+    static FFirstEquipConfigStruct GetActiveConfig(UObject* WorldContext) {
         FFirstEquipConfigStruct ConfigStruct{};
         FConfigId ConfigId{"FirstEquipAnimations", ""};
-        UConfigManager* ConfigManager = GEngine->GetEngineSubsystem<UConfigManager>();
-        ConfigManager->FillConfigurationStruct(ConfigId, FDynamicStructInfo{FFirstEquipConfigStruct::StaticStruct(), &ConfigStruct});
+        if (const UWorld* World = GEngine->GetWorldFromContextObject(WorldContext, EGetWorldErrorMode::ReturnNull)) {
+            UConfigManager* ConfigManager = World->GetGameInstance()->GetSubsystem<UConfigManager>();
+            ConfigManager->FillConfigurationStruct(ConfigId, FDynamicStructInfo{FFirstEquipConfigStruct::StaticStruct(), &ConfigStruct});
+        }
         return ConfigStruct;
     }
 };

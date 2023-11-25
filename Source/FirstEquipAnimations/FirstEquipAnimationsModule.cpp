@@ -15,7 +15,7 @@ void FFirstEquipAnimationsModule::StartupModule() {
 #if !WITH_EDITOR
 	SUBSCRIBE_METHOD(AFGEquipment::ShouldShowStinger, [](auto& Scope, const AFGEquipment* self)
 	{
-		auto config = FFirstEquipConfigStruct::GetActiveConfig();
+		auto config = FFirstEquipConfigStruct::GetActiveConfig(self->GetWorld());
 		float chance;
 
 		//Cursed, but eh.
